@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: microserviercloud-provider-dept-8001
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: zh199609
+    url: jdbc:mysql://119.29.238.123:3306/springcloud01?useUnicode=true&characterEncoding=utf8
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+eureka:
+  client: #客户端注册进eureka服务列表
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+  instance:
+    instance-id: microservicecloud-dept-8001
+    prefer-ip-address: true
+
+info:
+  app.name: zl-cloud
+  company.name: www.zl77.cn
+  build.artifactId: microservicecloud-provider-dept-8001
+  build.version: 1.0-SNAPSHOT
