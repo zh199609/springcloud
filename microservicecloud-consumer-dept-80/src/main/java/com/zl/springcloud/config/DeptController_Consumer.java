@@ -19,11 +19,13 @@ public class DeptController_Consumer {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+
+    private static final String REST_URL_PREFIX = "http://MICROSERVIERCLOUD-PROVIDER-DEPT";
 
     @RequestMapping(value = "/consumer/dept/add")
     public boolean add(Dept dept){
-        return restTemplate.postForObject(REST_URL_PREFIX+"dept/add",dept,Boolean.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",dept,Boolean.class);
     }
 
     @RequestMapping(value = "/consumer/get/{id}")
@@ -34,6 +36,6 @@ public class DeptController_Consumer {
 
     @RequestMapping(value = "/consumer/dept/list")
     public List<Dept> list(Dept dept){
-        return restTemplate.getForObject(REST_URL_PREFIX+"dept/list",List.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list",List.class);
     }
 }
