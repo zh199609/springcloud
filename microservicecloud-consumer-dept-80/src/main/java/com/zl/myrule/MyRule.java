@@ -8,8 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MyRule {
 
-    @Bean
+
     public IRule myRuleArithmetic2(){
-        return new RandomRule();
+        return new RandomRule();//随机
+    }
+
+    @Bean
+    public IRule myRuleArithmetic3(){
+        return new MyRandomRule();//5次切换  -轮询
     }
 }
