@@ -2,4 +2,4 @@
 /.recommenders/
 /**/target/
 *.class
-.idea/
+/.idea:
