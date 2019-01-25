@@ -92,7 +92,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -102,7 +101,6 @@
                     </delimiters>
                 </configuration>
             </plugin>
-        </plugins>
     </build>
 
 </project>
